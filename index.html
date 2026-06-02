@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>中国省会城市天气</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <!-- Header -->
+    <header class="header">
+      <div class="header-content">
+        <h1 class="title">
+          <span class="title-icon">🌤️</span>
+          中国省会城市天气
+        </h1>
+        <p class="subtitle">实时天气数据 · 覆盖34个省级行政中心</p>
+      </div>
+      <div class="header-actions">
+        <button class="btn-refresh" id="btnRefresh" title="刷新天气数据">
+          <span class="refresh-icon">🔄</span>
+          <span>刷新</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Stats Bar -->
+    <section class="stats-bar" id="statsBar">
+      <div class="stat-item">
+        <span class="stat-label">城市数量</span>
+        <span class="stat-value" id="statCount">34</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-label">平均气温</span>
+        <span class="stat-value" id="statAvg">--°</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-label">最热城市</span>
+        <span class="stat-value hot" id="statHottest">--</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-label">最冷城市</span>
+        <span class="stat-value cold" id="statColdest">--</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-label">更新时间</span>
+        <span class="stat-value time" id="statTime">加载中...</span>
+      </div>
+    </section>
+
+    <!-- Search -->
+    <section class="search-section">
+      <div class="search-wrapper">
+        <span class="search-icon">🔍</span>
+        <input
+          type="text"
+          class="search-input"
+          id="searchInput"
+          placeholder="搜索城市名称..."
+          autocomplete="off"
+        >
+        <button class="search-clear hidden" id="searchClear">✕</button>
+      </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content" id="mainContent">
+      <!-- Cards will be rendered by JS -->
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>数据来源：Open-Meteo API | 天气数据仅供参考</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
